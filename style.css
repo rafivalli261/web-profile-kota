@@ -1,15 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-body {
-    font-family: 'Poppins',sans-serif;
+/* reset margin dan padding */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-h2, h3 {
-    color: #ff5858;
+/* membuat semacam navbar */
+ul li {
+	display: inline-block;
+	padding: 0.5rem;
+	margin: 1rem;
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+ul li a {
+	text-decoration: none;
+	color: salmon;
+}
+
+ul li a:hover {
+	color: orange;
+	font-size: 1.07rem;
+	transition: all 1s ease;
+}
+
+/* mengkondisikan body */
+body {
+	font-family: "Poppins", sans-serif;
+	background-color: #eee;
+}
+
+/* membuat header */
+header {
+	padding: 2rem;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header h1 {
+	font-size: 3rem;
+	margin: 0.2rem;
+	flex-grow: 4;
+}
+
+.header p {
+	margin: 0.2rem;
+	flex-grow: 2;
+	text-align: justify;
+}
+
+h2,
+h3 {
+	color: #ff5858;
 }
 
 footer {
-    padding: 25px;
-    color: #fff;
-    background-color: #ff5858;
+	padding: 25px;
+	color: #fff;
+	background-color: #ff5858;
+	text-align: center;
+}
+
+/* konten utama */
+
+/* Sejarah */
+
+#sejarah {
+	margin: 2rem;
+	display: grid;
+	grid-template-columns: repeat (2, 1fr);
+	grid-template-areas:
+		"jumbotron sejarah1"
+		"sejarah2 sejarah2";
+}
+
+.jumbotron {
+	grid-area: "jumbotron";
+	background-color: lightcoral;
+}
+
+.jumbotron img {
+	width: 100%;
+}
+
+.sejarah1 {
+	grid-area: "sejarah1";
+	background-color: lightcyan;
+}
+
+.sejarah2 {
+	grid-area: "sejarah2 sejarah2";
+	background-color: lightgray;
+}
+
+/* responsive */
+
+@media (max-width: 500px) {
+	.header {
+		flex-direction: column;
+	}
 }
